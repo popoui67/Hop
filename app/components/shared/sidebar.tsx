@@ -1,6 +1,7 @@
 "use client"
 import Link from "next/link"
 import Image from "next/image"
+import { Button } from "@/components/ui/button"
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
 import { navLinks } from "@/lib/constants"
 import { usePathname } from "next/navigation"
@@ -59,11 +60,10 @@ className={`${isactive && 'brightness-200'}`}
         </ul>
     </SignedIn>
     <SignedOut>
-        ///render Button in shadcn
-        Button asChild className="button bg-purple-gradient bg-cover"
-        <Link href="/sign-in">LogIn</Link>
-        Button
-    </SignedOut>
+            <Button asChild className="button bg-purple-gradient bg-cover">
+              <Link href="/sign-in">Login</Link>
+            </Button>
+          </SignedOut>
 
 </nav>
 </div>
