@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
-import "./globals.css";
 import { cn } from "@/lib/utils";
 import { MobileSideBar, SideBar } from "../components/shared/sidebar";
 const inter = IBM_Plex_Sans({ subsets: ["latin"] ,
