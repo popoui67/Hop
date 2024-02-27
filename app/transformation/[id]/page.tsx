@@ -1,4 +1,4 @@
-export default function Transformation ({id} :{id :string}) {
+export default function Transformation () {
     return(
         <></>
     )
