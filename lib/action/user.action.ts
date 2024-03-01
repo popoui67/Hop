@@ -15,3 +15,11 @@ catch(err :any) {
 }
 
 }
+export const getUsersbyId =async (userId :string)=>{
+    try {
+
+    }
+    catch(err :any) {
+
+    }
+}

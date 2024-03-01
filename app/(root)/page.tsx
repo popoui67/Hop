@@ -1,13 +1,14 @@
 "use client"
-
 import { useEffect, useState } from "react"
-
 const Home =() =>{
 const [elements , setElement] =useState<number>(0)
 const [numbertodisp, setNumbertodisp] =useState<number>(0)
 const [numbertodisp2, setNumbertodisp2] =useState<number>(0)
 const [resault , setResault] =useState<number>(0)
 const [eq , setEq] =useState(false)
+
+  
+  
   const HandleSubmit =(number :number ) =>{
 if(number){
   setNumbertodisp(number)
