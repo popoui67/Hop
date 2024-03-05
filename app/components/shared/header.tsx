@@ -1,3 +1,4 @@
+/*
 export const Header =({title , subTitle}:{title :string , subTitle?:string}  ) =>{
     return (
         <>
@@ -8,3 +9,4 @@ export const Header =({title , subTitle}:{title :string , subTitle?:string}  ) =
         </>
     )
 }
+*/
