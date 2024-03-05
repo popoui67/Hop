@@ -46,7 +46,6 @@ export async function POST(req: Request) {
       "svix-timestamp": svix_timestamp,
       "svix-signature": svix_signature,
     }) as WebhookEvent;
-  console.log("1")
   } catch (err) {
     console.error("Error verifying webhook:", err);
     return new Response("Error occured", {
@@ -56,7 +55,7 @@ export async function POST(req: Request) {
 
   // Get the ID and type
   const eventType = evt.type;
-  console.log("2")
+
   // CREATE
   if (eventType === "user.created") {
     const { id, email_addresses, image_url, first_name, last_name, username } = evt.data;
@@ -71,7 +70,6 @@ export async function POST(req: Request) {
     };
 
     const newUser = await CreateUser(user);
-    console.log("3")
     if (newUser) {
       await clerkClient.users.updateUserMetadata(id, {
         publicMetadata: {
@@ -79,7 +77,6 @@ export async function POST(req: Request) {
         },
       });
     }
-    console.log("4")
     return NextResponse.json({ message: "OK", user: newUser });
    
   }
